@@ -1,0 +1,70 @@
+extends:
+  - airbnb
+parser: babel-eslint
+plugins: ['flowtype']
+env:
+  jest: true
+globals:
+  __DEV__: true
+  window: true
+  fetch: true
+  mapfit: true
+  $: true
+  get: true
+  def: true
+  apiUrl: true
+  ga: true
+  document: true
+  Turbolinks: true
+  alert: true
+  FormData: true
+rules:
+  camelcase:
+    - error
+    - ignoreDestructuring: true
+      properties: never
+  flowtype/define-flow-type: 1
+  arrow-body-style: warn
+  semi: ['error', 'never']
+  class-methods-use-this: 0
+  import/extensions: 0
+  import/no-extraneous-dependencies: 0
+  import/prefer-default-export: 0
+  import/no-unresolved: 0
+  import/no-named-as-default: 0
+  react/jsx-filename-extension: [0, [".js", ".jsx"]]
+  react/destructuring-assignment: 0
+  object-curly-newline: 0
+  no-underscore-dangle: warn
+  operator-linebreak:
+    - error
+    - before
+    - overrides:
+        '&&': after
+  jsx-quotes: [error, prefer-single]
+  jsx-a11y/mouse-events-have-key-events: off
+  jsx-a11y/click-events-have-key-events: off
+  jsx-a11y/label-has-associated-control: warn
+  jsx-a11y/label-has-for:
+    - error
+    - required:
+        some: [ "nesting", "id" ]
+  react/sort-comp:
+    - error
+    - order:
+      - static-methods
+      - instance-variables
+      - lifecycle
+      - /^on.+$/
+      - getters
+      - setters
+      - /^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/
+      - instance-methods
+      - everything-else
+      - render
+      - /^render.+$/
+  react/jsx-wrap-multilines:
+    - error
+    - logical: ignore
+parserOptions:
+  ecmaVersion: 2017
