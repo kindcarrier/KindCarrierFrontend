@@ -1,0 +1,105 @@
+.text-input {
+  width: 100%;
+  
+  &::placeholder {
+    color: #BABABA;
+    font-size: 14px;
+  }
+  
+  &__field {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 12px 0 11px 10px;
+    height: 45px;
+    background-color: rgba(104, 102, 102, .11);
+    border-radius: 3px;
+    color: #000;
+    font-size: 16px;
+    line-height: 19px;
+
+    &::placeholder {
+      color: #686666;
+    }
+
+    &_theme_login {
+      height: 40px;
+      background-color: rgba(255, 255, 255, .2);
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 17px;
+      caret-color: #fff;
+
+      &:-webkit-autofill {
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: 0 0 0 100px #c4525e inset;
+        box-shadow: 0 0 0 100px #c4525e inset;
+      }
+
+      &::placeholder {
+        color: #fff;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        color:transparent;
+      }
+    }
+
+    &_theme_textarea {
+      background-color: rgba(104, 102, 102, .11);
+      border-radius: 5px;
+      height: 75px;
+      resize: none;
+      width: 100%;
+    }
+  }
+
+  &__error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    line-height: 17px;
+    min-height: 17px;
+
+    &_theme_login {
+      color: #fff;
+    }
+  }
+}
+
+// @media (min-width: $tablet-breakpoint) {
+//   .text-input {
+//     &::placeholder {
+//       font-size: rem(14px);
+//       font-weight: 400;
+//     }
+
+//     &__field {
+//       padding: rem(12px) 0 rem(11px)rem(10px);
+//       height: rem(45px);
+//       border-radius: rem(3px);
+//       font-size: rem(16px);
+//       line-height: rem(19px);
+
+//       &_theme_login {
+//         height: rem(40px);
+//         border-radius: rem(5px);
+//         font-size: rem(14px);
+//         line-height: rem(17px);
+//       }
+
+//       &_theme_textarea {
+//         height: rem(75px);
+//         border-radius: rem(5px);
+//       }
+//     }
+
+//     &__error {
+//       font-size: rem(14px);
+//       line-height: rem(17px);
+//       min-height: rem(17px);
+//       font-weight: 400;
+//     }
+//   }
+// }

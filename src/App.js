@@ -1,14 +1,18 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Store from 'store'
+import { Signup, Login, Account } from 'pages'
 
 function App() {
   return (
     <Store>
       <Router>
-        <div className='App'>
-          HOME
-        </div>
+        <Switch>
+          <Route path='/signup' component={Signup} />
+          <Route path='/login' component={Login} />
+          <Route path='/account' component={Account} />
+          <Route render={() => <div>404 Not Found</div>} />
+        </Switch>
       </Router>
     </Store>
   )

@@ -3,7 +3,7 @@
 [include]
 
 [libs]
-src/types
+src/models.js
 [lints]
 
 [options]
