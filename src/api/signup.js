@@ -1,5 +1,6 @@
 // @flow
 import { API_URL } from 'consts'
+import checkError from './checkError'
 
 type SignupParams = {
   first_name: string,
@@ -15,8 +16,5 @@ export default function signup(params: SignupParams): Promise<Object> {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(params),
     })
-    .then((res) => {
-      if (!res.ok) throw new Error('Ошибка сервера')
-      return res.json()
-    })
+    .then(checkError)
 }

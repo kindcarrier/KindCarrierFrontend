@@ -1,6 +1,7 @@
 // @flow
 import { API_URL } from 'consts'
 import defaultHeader from 'utils/defaultHeader'
+import checkError from './checkError'
 
 export default function uploadImage(id: number, img: File): Promise<any> {
   const fd = new FormData()
@@ -13,6 +14,5 @@ export default function uploadImage(id: number, img: File): Promise<any> {
       headers,
       body: fd,
     })
-    .then(res => res.json())
-    .catch(error => console.error(error.message))
+    .then(checkError)
 }
