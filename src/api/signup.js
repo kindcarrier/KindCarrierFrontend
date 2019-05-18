@@ -19,5 +19,4 @@ export default function signup(params: SignupParams): Promise<Object> {
       if (!res.ok) throw new Error('Ошибка сервера')
       return res.json()
     })
-    .catch(error => console.log(error))
 }

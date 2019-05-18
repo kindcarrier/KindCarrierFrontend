@@ -1,7 +1,7 @@
 // @flow
 import { store } from 'store'
 
-function defaultHeader() {
+function defaultHeader(): Object {
   const { user: { token } } = store.getState()
   return {
     'Content-Type': 'application/json',
