@@ -7,7 +7,7 @@ export default function uploadImage(id: number, img: File): Promise<any> {
   const fd = new FormData()
   fd.append('avatar', img)
   const headers = defaultHeader()
-  headers['Content-Type'] = null
+  delete headers['Content-Type']
   return fetch(`${API_URL}/users/${id}`,
     {
       method: 'PUT',
