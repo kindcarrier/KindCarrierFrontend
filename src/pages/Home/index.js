@@ -59,7 +59,7 @@ class Home extends React.PureComponent<{}, State> {
         <LeftPane />
         <div className={h()}>
           <NegoStarter onClick={this.toggleModal} modalOpen={this.state.modalOpen} />
-          <MainMap markers={markers} onClick={this.toggleModal} />
+          <MainMap markers={markers} />
         </div>
       </>
     )
