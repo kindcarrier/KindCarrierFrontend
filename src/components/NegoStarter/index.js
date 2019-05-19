@@ -31,7 +31,7 @@ class NegoStarter extends React.PureComponent<Props, State> {
           <button
             type='button'
             className={ns('button', { ask: true })}
-            onClick={this.toggleModal}
+            onClick={this.props.onClick}
           >
             Найти
           </button>
