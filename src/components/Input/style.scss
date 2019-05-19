@@ -2,8 +2,8 @@
   width: 100%;
   
   &::placeholder {
-    color: #BABABA;
-    font-size: 14px;
+    color: #ABABAB;
+    font-size: 12px;
   }
   
   &__field {
@@ -12,38 +12,31 @@
     outline: none;
     padding: 12px 0 11px 10px;
     height: 45px;
-    background-color: rgba(104, 102, 102, .11);
-    border-radius: 3px;
+    background-color: #F5F5F5;
+    border-radius: 2px;
     color: #000;
     font-size: 16px;
     line-height: 19px;
 
     &::placeholder {
-      color: #686666;
+      color: #ABABAB;
+      font-size: 12px;
     }
 
-    &_theme_login {
-      height: 40px;
-      background-color: rgba(255, 255, 255, .2);
-      border-radius: 5px;
-      color: #fff;
-      font-size: 14px;
-      line-height: 17px;
-      caret-color: #fff;
+    &_theme_human {
+      padding-left: 28px;
+      background-image: url('./assets/human.svg');
+      background-repeat: no-repeat;
+      background-size: 10.66px 14px;
+      background-position: 11px center; 
+    }
 
-      &:-webkit-autofill {
-        -webkit-text-fill-color: #fff;
-        -webkit-box-shadow: 0 0 0 100px #c4525e inset;
-        box-shadow: 0 0 0 100px #c4525e inset;
-      }
-
-      &::placeholder {
-        color: #fff;
-      }
-
-      &:focus::-webkit-input-placeholder {
-        color:transparent;
-      }
+    &_theme_key {
+      padding-left: 28px;
+      background-image: url('./assets/key.svg');
+      background-repeat: no-repeat;
+      background-size: 10.66px 14px;
+      background-position: 11px center; 
     }
 
     &_theme_textarea {

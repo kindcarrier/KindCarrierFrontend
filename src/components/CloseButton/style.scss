@@ -1,0 +1,13 @@
+.close-button {
+  display: block;
+  outline: none;
+  border: 0;
+  padding: 0;
+  margin: 16px 16px 0 auto;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  background-image: url('./assets/close_button.svg');
+  background-size: cover;
+  cursor: pointer;
+}

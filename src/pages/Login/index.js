@@ -8,7 +8,6 @@ import { combineValidators, isRequired } from 'revalidate'
 import { Input } from 'components'
 import { loginSucceed } from 'store/user/userActions'
 import login from 'api/login'
-import './style.scss'
 
 type Props = {
   loginSucceed: Function,
@@ -33,37 +32,43 @@ class Login extends React.PureComponent<Props, {}> {
     const { handleSubmit, error, pristine, submitting, invalid } = this.props
     const notValid = pristine || error || invalid || submitting
     return (
-      <div className={s('container')}>
-        <form onSubmit={handleSubmit(this.onSubmit)}>
-          <div>
-            <label htmlFor='email'>
-              Email
-            </label>
-            <Field
-              id='email'
-              name='email'
-              type='email'
-              component={Input}
-            />
+      <div className={s()}>
+        <div className={s('container')}>
+          <div className={s('header')}>
+            Вход
           </div>
-          <div>
-            <label htmlFor='password'>
-              Пароль
-            </label>
-            <Field
-              id='password'
-              name='password'
-              type='password'
-              component={Input}
-            />
-          </div>
-          <button
-            type='submit'
-            disabled={notValid}
-          >
-            Войти
-          </button>
-        </form>
+          <form onSubmit={handleSubmit(this.onSubmit)}>
+            <div className={s('input')}>
+              <label htmlFor='email' />
+              <Field
+                id='email'
+                name='email'
+                type='email'
+                component={Input}
+                placeholder='Email'
+                theme='human'
+              />
+            </div>
+            <div className={s('input')}>
+              <label htmlFor='password' />
+              <Field
+                id='password'
+                name='password'
+                type='password'
+                component={Input}
+                placeholder='Пароль'
+                theme='key'
+              />
+            </div>
+            <button
+              type='submit'
+              disabled={notValid}
+              className={s('btn', { login: true, disabled: submitting })}
+            >
+              Войти
+            </button>
+          </form>
+        </div>
       </div>
     )
   }

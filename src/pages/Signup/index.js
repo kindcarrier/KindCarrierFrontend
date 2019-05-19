@@ -39,70 +39,71 @@ class Signup extends React.PureComponent<Props, {}> {
     const { handleSubmit, error, pristine, submitting, invalid } = this.props
     const notValid = pristine || error || invalid || submitting
     return (
-      <div className={s('container')}>
-        <form onSubmit={handleSubmit(this.onSubmit)}>
-          <div>
-            <label htmlFor='first_name'>
-              Имя
-            </label>
-            <Field
-              id='first_name'
-              name='first_name'
-              type='text'
-              component={Input}
-            />
+      <div className={s()}>
+        <div className={s('container')}>
+          <div className={s('header')}>
+            Регистрация
           </div>
-          <div>
-            <label htmlFor='last_name'>
-              Фамилия
-            </label>
-            <Field
-              id='last_name'
-              name='last_name'
-              type='text'
-              component={Input}
-            />
-          </div>
-          <div>
-            <label htmlFor='email'>
-              Email
-            </label>
-            <Field
-              id='email'
-              name='email'
-              type='email'
-              component={Input}
-            />
-          </div>
-          <div>
-            <label htmlFor='password'>
-              Пароль
-            </label>
-            <Field
-              id='password'
-              name='password'
-              type='password'
-              component={Input}
-            />
-          </div>
-          <div>
-            <label htmlFor='password_confirm'>
-              Пароль еще раз
-            </label>
-            <Field
-              id='password_confirm'
-              name='password_confirm'
-              type='password'
-              component={Input}
-            />
-          </div>
-          <button
-            type='submit'
-            disabled={notValid}
-          >
-            Зарегистрироваться
-          </button>
-        </form>
+          <form onSubmit={handleSubmit(this.onSubmit)}>
+            <div className={s('input')}>
+              <label htmlFor='first_name' />
+              <Field
+                id='first_name'
+                name='first_name'
+                type='text'
+                component={Input}
+                placeholder='Имя'
+              />
+            </div>
+            <div className={s('input')}>
+              <label htmlFor='last_name' />
+              <Field
+                id='last_name'
+                name='last_name'
+                type='text'
+                component={Input}
+                placeholder='Фамилия'
+              />
+            </div>
+            <div className={s('input')}>
+              <label htmlFor='email' />
+              <Field
+                id='email'
+                name='email'
+                type='email'
+                component={Input}
+                placeholder='Email'
+              />
+            </div>
+            <div className={s('input')}>
+              <label htmlFor='password' />
+              <Field
+                id='password'
+                name='password'
+                type='password'
+                component={Input}
+                placeholder='********'
+              />
+            </div>
+            <div className={s('input')}>
+              <label htmlFor='password_confirm' />
+              <Field
+                id='password_confirm'
+                name='password_confirm'
+                type='password'
+                component={Input}
+                placeholder='********'
+              />
+            </div>
+            <button
+              type='submit'
+              disabled={notValid}
+              className={s('btn', { signup: true, disabled: submitting })}
+            >
+              Зарегистрироваться
+            </button>
+          </form>
+        </div>
       </div>
     )
   }

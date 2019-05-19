@@ -1,0 +1,90 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #35464E;
+  background-image: url('./assets/map.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__left-pane {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60px;
+    background-color: #fff;
+    z-index: 100;
+  }
+
+  &__menu-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0;
+    border: none;
+    outline: 0;
+    width: 26px;
+    height: 16px;
+    background-image: url('./assets/hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  &__quest-button {
+    display: block;
+    margin: 85vh auto;
+    padding: 0;
+    border: none;
+    outline: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('./assets/question.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  &__link-wrapper {
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-right: 30px;
+
+    &_login {
+      width: 94px;
+      padding: 6px 0;
+      text-align: center;
+      background-color: #FCC02E;
+    }
+
+    &_signup {
+      background-color: transparent;
+      padding: 6px 0;
+    }
+  }
+
+  &__logo {
+    padding: 0;
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: auto;
+    margin-left: 80px;
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
+}

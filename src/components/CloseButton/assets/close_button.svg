@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu" transform="translate(-27.000000, -35.000000)" fill="#35464E" fill-rule="nonzero">
+            <g id="Group" transform="translate(36.000000, 44.000000) rotate(-315.000000) translate(-36.000000, -44.000000) translate(25.000000, 33.000000)">
+                <path d="M20.025641,12.75 L1.97435897,12.75 C0.958974359,12.75 0.141025641,11.9444444 0.141025641,10.9444444 C0.141025641,9.94444444 0.958974359,9.13888889 1.97435897,9.13888889 L20.025641,9.13888889 C21.0410256,9.13888889 21.8589744,9.94444444 21.8589744,10.9444444 C21.8589744,11.9444444 21.0410256,12.75 20.025641,12.75 Z" id="XMLID_101_-path" transform="translate(11.000000, 10.944444) rotate(-270.000000) translate(-11.000000, -10.944444) "></path>
+                <path d="M21.7179487,10.8055556 C21.7179487,9.80555556 20.9,9 19.8846154,9 L1.83333333,9 C0.817948718,9 5.32907052e-15,9.80555556 5.32907052e-15,10.8055556 C5.32907052e-15,11.8055556 0.817948718,12.6111111 1.83333333,12.6111111 L19.8846154,12.6111111 C20.9,12.6111111 21.7179487,11.8055556 21.7179487,10.8055556 Z" id="XMLID_101_-path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
