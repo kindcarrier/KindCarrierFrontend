@@ -18,3 +18,26 @@ declare type Message = {
   read: boolean,
   content: string,
 }
+
+declare type Negotiation = {
+  name: string,
+  photo: string,
+  description: string,
+  service_cost: string,
+  latitude_from: number,
+  longitude_from: number,
+  latitude_to: number,
+  longitude_to: number,
+  type: string,
+  address_from: {},
+  address_to: {},
+  owner_id: number,
+  accepter: number,
+}
+
+declare type Marker = {
+  id: string,
+  lat: number,
+  lon: number,
+  type: string,
+}

@@ -4,34 +4,27 @@ import { block } from 'bem-cn'
 import { Modal, OfferCard } from 'components'
 import './style.scss'
 
-type State = {
+type Props = {
+  onClick: Function,
   modalOpen: boolean,
 }
 
 const ns = block('nego-starter')
 
-class NegoStarter extends React.PureComponent<{}, State> {
-  state = {
-    modalOpen: false,
-  }
-
-  toggleModal = () => (
-    this.setState(({ modalOpen }) => ({ modalOpen: !modalOpen }))
-  )
-
+class NegoStarter extends React.PureComponent<Props, State> {
   render() {
     return (
       <>
-        {this.state.modalOpen &&
-          <Modal onClick={this.toggleModal}>
-            <OfferCard />
+        {this.props.modalOpen &&
+          <Modal onClick={this.props.onClick}>
+            <OfferCard onClose={this.props.onClick} />
           </Modal>
         }
         <div className={ns()}>
           <button
             type='button'
             className={ns('button', { offer: true })}
-            onClick={this.toggleModal}
+            onClick={this.props.onClick}
           >
             Предложить
           </button>

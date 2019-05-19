@@ -4,13 +4,36 @@ import { block } from 'bem-cn'
 import { reduxForm, Field } from 'redux-form'
 import type { FormProps } from 'redux-form'
 import { connect } from 'react-redux'
+import { combineValidators, isRequired } from 'revalidate'
+import createNegotiation from 'api/createNegotiation'
 import { Input, Textarea } from 'components'
 import './style.scss'
 
+type Props = {
+  user: User,
+  onClose: Function,
+} & FormProps
+
 const oc = block('offer-card')
 
-class OfferCard extends React.PureComponent<FormProps, {}> {
-  onSubmit = values => console.log(values)
+const validate = combineValidators({
+  name: isRequired({ message: 'Поле не может быть пустым' }),
+  description: isRequired({ message: 'Введите описание' }),
+})
+
+class OfferCard extends React.PureComponent<Props, {}> {
+  onSubmit = (values) => {
+    const params = {
+      owner_id: this.props.user.id,
+      name: values.name,
+      description: values.description,
+      cost: '50',
+    }
+    console.log(params)
+    createNegotiation(params)
+      .then(this.props.onClose)
+      .catch(error => console.error(error))
+  }
 
   render() {
     const { handleSubmit, error, pristine, submitting, invalid } = this.props
@@ -36,16 +59,17 @@ class OfferCard extends React.PureComponent<FormProps, {}> {
               <label htmlFor='textarea' />
               <Field
                 id='textarea'
-                name='textarea'
+                name='description'
                 type='text'
                 theme='textarea'
                 component={Textarea}
+                placeholder='Описание'
               />
             </div>
             <button
               type='submit'
               disabled={notValid}
-              className={oc('btn', { disabled: submitting })}
+              className={oc('btn', { disabled: notValid })}
             >
               Заказать
             </button>
@@ -58,6 +82,11 @@ class OfferCard extends React.PureComponent<FormProps, {}> {
 
 const offerCard = reduxForm({
   form: 'offer-card',
+  validate,
 })(OfferCard)
 
-export default connect(null)(offerCard)
+const mapState = state => ({
+  user: state.user,
+})
+
+export default connect(mapState)(offerCard)
