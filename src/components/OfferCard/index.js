@@ -12,6 +12,7 @@ import './style.scss'
 type Props = {
   user: User,
   onClose: Function,
+  type: string,
 } & FormProps
 
 const oc = block('offer-card')
@@ -29,7 +30,6 @@ class OfferCard extends React.PureComponent<Props, {}> {
       description: values.description,
       cost: '50',
     }
-    console.log(params)
     createNegotiation(params)
       .then(this.props.onClose)
       .catch(error => console.error(error))
@@ -41,7 +41,7 @@ class OfferCard extends React.PureComponent<Props, {}> {
     return (
       <div className={oc()}>
         <p className={oc('header')}>
-          хочу заказать
+          {this.props.type === 'offer' ? 'могу привезти' : 'хочу заказать'}
         </p>
         <form onSubmit={handleSubmit(this.onSubmit)}>
           <div className={oc('form')}>
