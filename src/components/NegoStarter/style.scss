@@ -1,0 +1,32 @@
+.nego-starter {
+  position: fixed;
+  z-index: 10;
+  top: 80vh;
+  left: 80vw;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__button {
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 4px;
+    outline: none;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #FFF;
+    cursor: pointer;
+
+    &_offer {
+      background-color: lighten(green, 10);
+    }
+
+    &_ask {
+      background-color: #FCC02E;
+    }
+  }
+}

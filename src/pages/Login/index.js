@@ -24,7 +24,7 @@ class Login extends React.PureComponent<Props, {}> {
   onSubmit = values => (
     login(values)
       .then(this.props.loginSucceed)
-      .then(() => this.props.history.push('/account'))
+      .then(() => this.props.history.push('/home'))
       .catch(error => console.error(error.message))
   )
 

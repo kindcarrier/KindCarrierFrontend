@@ -23,6 +23,8 @@ const Menu = ({ visible, onClick, user, logOut: logout }: Props) => (
       {user.token &&
         <Link to='/account' className={m('menu-link')}>Профиль</Link>}
       {user.token &&
+        <Link to='/home' className={m('menu-link')}>Главная страница</Link>}
+      {user.token &&
         <Link to='/' onClick={logout} className={m('menu-link')}>Выйти</Link>}
     </div>
   </div>
