@@ -8,7 +8,7 @@ type State = {
   menuOpen: boolean,
 }
 
-const h = block('home')
+const lp = block('left-pane')
 
 class LeftPane extends React.PureComponent<{}, State> {
   state = {
@@ -21,10 +21,10 @@ class LeftPane extends React.PureComponent<{}, State> {
 
   render() {
     return (
-      <div className={h('left-pane')}>
+      <div className={lp()}>
         <Menu visible={this.state.menuOpen} onClick={this.toggleMenuOpen} />
-        <button type='button' className={h('menu-button')} onClick={this.toggleMenuOpen} />
-        <button type='button' className={h('quest-button')} />
+        <button type='button' className={lp('menu-button')} onClick={this.toggleMenuOpen} />
+        <button type='button' className={lp('quest-button')} />
       </div>
     )
   }

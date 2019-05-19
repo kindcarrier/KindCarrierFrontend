@@ -2,7 +2,7 @@
 import React from 'react'
 import { block } from 'bem-cn'
 import { Link } from 'react-router-dom'
-import LeftPane from './LeftPane'
+import { LeftPane } from 'components'
 import './style.scss'
 
 const h = block('home')

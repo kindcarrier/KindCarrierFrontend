@@ -1,5 +1,141 @@
 .account {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #35464E;
+
+  &__container {
+    position: relative;
+    width: 454px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2px;
+    box-shadow: 0 0 6px 3px #E5E5E5;
+    background-color: #FFF;
+  }
   &__input {
     display: none;
+  }
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 128px;
+    height: 100%;
+  }
+
+  &__profile-wrapper {
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    position: relative;
+    padding: 10px;
+    margin: 20px 0;
+  }
+
+  &__button {
+    outline: none;
+    width: 140px;
+    border-radius: 9px;
+    color: #35464E;
+    border: 2px solid #35464E;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 6px 0;
+    margin: 4px 0 12px 0;
+  }
+
+  &__btn-edit {
+    position: absolute;
+    bottom: -12%;
+    transform: translateX(40%);
+    width: 78px;
+    padding: 6px 12px;
+    color: #FFF;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    background-color: #FCC02E;
+    cursor: pointer;
+
+    &_disabled {
+      background-color: lighten(#FCC02E, 40);
+      cursor: initial;
+    }
+  }
+
+  &__msg-icon {
+    position: absolute;
+    top: -20px;
+    right: -50px;
+    width: 100px;
+    height: 60px;
+    background-image: url('./assets/envelope.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+    transform: rotate(-30deg);
+    cursor: pointer;
+  }
+
+  &__msg-qtty {
+    display: inline-block;
+    margin-top: 32px;
+    margin-left: 26px;
+    color: red;
+    font-size: 24px;
+    transform: rotate(30deg);
+  }
+
+  &__kindness {
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px 0;
+  }
+
+  &__kind {
+    font-size: 18px;
+
+    &_modifier_evil {
+      color: lighten(red, 10);
+    }
+
+    &_modifier_soso {
+      color: #FCC02E;
+    }
+
+    &_modifier_kind {
+      color: lighten(green, 20);
+    }
+  }
+
+  &__gauge {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 3px 0;
+    width: 30px;
+    height: 8px;
+    border-radius: 3px;
+
+    &_modifier_evil {
+    background-color: lighten(red, 10);
+    }
+
+    &_modifier_soso {
+      background-color: #FCC02E;
+    }
+
+    &_modifier_kind {
+      background-color: lighten(green, 20);
+    }
   }
 }
