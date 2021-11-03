@@ -20,7 +20,7 @@
     "redux-form": "^8.2.0",
     "redux-persist": "^5.10.0",
     "revalidate": "^1.2.0",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
